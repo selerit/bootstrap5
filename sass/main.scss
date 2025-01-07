@@ -1,0 +1,44 @@
+// custom variable values
+$primary: #dba35b;
+$light: #bbcec3;
+$secondary: #6c757d;
+$success: #7cb1b5;
+
+$custom-theme-colors: (
+  "primary": #ab8b5e,
+  "secondary": #6c757d,
+  "success": #83c994,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #f9cd54,
+  "dark": #343a40,
+  "altlight": #f2ebfa,
+  "altdark": #522192
+);
+
+
+
+
+$zindex-offcanvas: 1055;
+
+// import the functions & variables
+
+@import '../node_modules/bootstrap/scss/functions';
+
+@import '../node_modules/bootstrap/scss/variables';
+
+// custom theme colours
+// $custom-theme-colors: (
+//   "altlight": #f2ebfa,
+//   "altdark": #522192
+// );
+
+// merge the maps to add new theme colors
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+// import bootstrap
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
